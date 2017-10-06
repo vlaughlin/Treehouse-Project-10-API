@@ -1,15 +1,18 @@
+$(document).ready(function () {
+
 $.ajax({
-    url: 'https://randomuser.me/api?results=12& inc = name, email, picture, location, cell, login, dob & nat = us',
-    dataType: 'json',
+    url: 'http://api.randomuser.me/',
+    dataType: 'jsonp',
     success: function (data) {
         console.log(data);
-
-
+        
+        $('<img />', {
+            src: data.results[0].picture.large
+        }).appendTo('#result')
     }
-
-    document.getElementById('image').src = data.results[0].picture.large;
-    document.getElementById('firstName').textContent = data.results[0].name.first;
-    document.getElementById('lastName').textContent = data.results[0].name.last;
-
-
 });
+
+}); //END READY
+
+
+    
