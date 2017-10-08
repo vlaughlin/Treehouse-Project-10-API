@@ -1,18 +1,20 @@
 $(document).ready(function () {
 
-$.ajax({
-    url: 'https://randomuser.me/api?results=12& inc = name, email, picture, location, cell, login, dob & nat = us',
-    dataType: 'jsonp',
-    success: function (data) {
-        console.log(data);
-        
-        $('<img />', {
-            src: data.results[0].picture.large
-        }).appendTo('#employeelist')
-    }
-});
-
-}); //END READY
+            //DEFINE VARIABLES
+            var employeeCount = 12;
 
 
-    
+            $.ajax({
+                    url: 'https://randomuser.me/api/?format=json&results=' + employeeCount + '&inc=picture,name,login,email,location,cell,dob,nat&nat=us,gb',
+                    dataType: 'jsonp',
+                    success: function (data) {
+                        console.log(data);
+                        for (let i = 0; i< employeeCount ; i++) 
+
+                            $('<img />', {
+                                src: data.results[0].picture.large
+                            }).appendTo('#employeelist')
+                        }
+                    });
+
+            }); //END READY
