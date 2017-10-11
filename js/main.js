@@ -1,20 +1,33 @@
+//LOAD DOM//
+
 $(document).ready(function () {
 
-            //DEFINE VARIABLES
-            var employeeCount = 12;
 
 
-            $.ajax({
-                    url: 'https://randomuser.me/api/?format=json&results=' + employeeCount + '&inc=picture,name,login,email,location,cell,dob,nat&nat=us,gb',
-                    dataType: 'jsonp',
-                    success: function (data) {
-                        console.log(data);
-                        for (let i = 0; i< employeeCount ; i++) 
+    //GET JSON DATA USING AN AJAX HTTP GET REQUEST//
 
-                            $('<img />', {
-                                src: data.results[0].picture.large
-                            }).appendTo('#employeelist')
-                        }
-                    });
+    $.getJSON(
+        'https://randomuser.me/api/', //API URL//
 
-            }); //END READY
+        {
+            results: 12, // AMOUNT OF EMPLOYEES
+
+        },
+
+
+        function displayEmployee(data) {
+            var photoHTML = '<ul>';
+            $.each(data.results, function (i, photo) {
+                photoHTML += '<li class="employee-list">';
+                photoHTML += '<img class="image--avatar" src="' + photo.picture.medium + '">'
+            });
+            photoHTML += '</ul>';
+            $('#employeelist').html(photoHTML);
+
+
+
+
+        }); //GET JASON DATA END
+
+
+}); //LOAD DOM END
