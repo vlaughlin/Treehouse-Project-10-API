@@ -15,14 +15,15 @@ $(document).ready(function () {
         },
 
 
-        function displayEmployee(data) {
-            var photoHTML = '<ul>';
-            $.each(data.results, function (i, photo) {
-                photoHTML += '<li class="employee-list">';
-                photoHTML += '<img class="image--avatar" src="' + photo.picture.medium + '">'
+        function displayEmployees(data) {
+            var EmployeeHTML = '<ul>';
+            $.each(data.results, function (i, employee) {
+                //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
+                EmployeeHTML += '<li class="employee-list">';
+                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">'
             });
-            photoHTML += '</ul>';
-            $('#employeelist').html(photoHTML);
+            EmployeeHTML += '</ul>';
+            $('#employee-list').html(EmployeeHTML);
 
 
 
