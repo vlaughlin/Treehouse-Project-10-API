@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         {
             results: 12, // AMOUNT OF EMPLOYEES
-
+             nat: ['us'], 
         },
 
 
@@ -24,9 +24,13 @@ $(document).ready(function () {
                   //BUILD HTML TO DISPLAY NAMES IN PAGE//
                 EmployeeHTML += '<div class="employee-info">';
                 EmployeeHTML += '<span class="employee-name">' + employee.name.first + ' ' + employee.name.last + '</span>'
+                 //BUILD HTML TO DISPLAY EMAILS IN PAGE//
                 EmployeeHTML += '<span class="employee-email">' + employee.email + '</span>'
-                
-                   '</div>'
+                //BUILD HTML TO DISPLAY LOCATIONS IN PAGE//
+                EmployeeHTML += '<span class="employee-location">' + 
+                employee.location.city + '</span>'    
+                   
+                '</div>'
             });
             EmployeeHTML += '</ul>';
             $('#employee-list').html(EmployeeHTML);
