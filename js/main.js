@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         {
             results: 12, // AMOUNT OF EMPLOYEES
-             nat: ['us'], 
+             nat: ['us'], // NATIONALITY 
         },
 
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 
 
-        }); //GET JASON DATA END
+        }); //GET JSON DATA END
 
 
 }); //LOAD DOM END
