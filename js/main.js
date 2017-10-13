@@ -24,6 +24,9 @@ $(document).ready(function () {
                   //BUILD HTML TO DISPLAY NAMES IN PAGE//
                 EmployeeHTML += '<div class="employee-info">';
                 EmployeeHTML += '<span class="employee-name">' + employee.name.first + ' ' + employee.name.last + '</span>'
+                EmployeeHTML += '<span class="employee-email">' + employee.email + '</span>'
+                
+                   '</div>'
             });
             EmployeeHTML += '</ul>';
             $('#employee-list').html(EmployeeHTML);
