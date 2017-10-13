@@ -21,6 +21,9 @@ $(document).ready(function () {
                 //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
                 EmployeeHTML += '<li class="employee-list">';
                 EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">'
+                  //BUILD HTML TO DISPLAY NAMES IN PAGE//
+                EmployeeHTML += '<div class="employee-info">';
+                EmployeeHTML += '<span class="employee-name">' + employee.name.first + ' ' + employee.name.last + '</span>'
             });
             EmployeeHTML += '</ul>';
             $('#employee-list').html(EmployeeHTML);
