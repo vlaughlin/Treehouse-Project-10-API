@@ -3,8 +3,10 @@ body {
 }
 
 h1 {
-    font-size: 16px;
+    font-size: 20px;
     color: #3a3a3a;
+    text-align: center;
+
 }
 
 .profile-pic {
@@ -35,7 +37,7 @@ ul {
 
 
 .employee-name {
-    font-size: 20px;
+    font-size: 13px;
     display: inline-block;
     text-transform: capitalize;
     font-weight: bold;
@@ -43,12 +45,53 @@ ul {
 
 .employee-email {
     display: inline-block;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .employee-location {
     text-transform: capitalize;
     display: inline-block;
-    font-size: 14px;
+    font-size: 10px;
+
+}
+
+.container {
+
+    margin-top: -2em;
+}
+
+
+@media (min-width: 768px) {
+    .employee-list {
+        float: left;
+        top: 80px;
+        margin: 4px;
+        width: 40%;
+
+    }
+
+
+
+    .employee-name {
+        font-size: 12px;
+
+    }
+
+    .employee-email {
+
+        font-size: 15px;
+    }
+
+    .employee-location {
+
+        font-size: 15px;
+
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-top: 60px;
+
+    }
 
 }
