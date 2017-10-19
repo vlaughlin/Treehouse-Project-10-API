@@ -20,7 +20,9 @@ $(document).ready(function () {
             $.each(data.results, function (i, employee) {
                 //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
                 EmployeeHTML += '<li class="employee-list">';
+                 EmployeeHTML += '<a href="'  + employee.picture.large + '" rel="lightbox" ></a>'
                 EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">'
+                
                   //BUILD HTML TO DISPLAY NAMES IN PAGE//
                 EmployeeHTML += '<div class="employee-info">';
                 EmployeeHTML += '<span class="employee-name">' + employee.name.first + ' ' + employee.name.last + '</span>'
