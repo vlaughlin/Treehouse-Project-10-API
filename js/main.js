@@ -20,8 +20,8 @@ $(document).ready(function () {
             $.each(data.results, function (i, employee) {
                 //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
                 EmployeeHTML += '<li class="employee-list">';
-                 EmployeeHTML += '<a href="'  + employee.picture.large + '" rel="lightbox" ></a>'
-                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">'
+                 EmployeeHTML += '<a href="'  + employee.picture.large + '" rel="lightbox" >'
+                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">' + '</a>'
                 
                   //BUILD HTML TO DISPLAY NAMES IN PAGE//
                 EmployeeHTML += '<div class="employee-info">';
@@ -41,6 +41,14 @@ $(document).ready(function () {
 
 
         }); //GET JSON DATA END
+    
+    
+    $(function(){
+  $('a[rel=lightbox]').lightBox({
+    containerResizeSpeed: 250,
+    fixedNavigation: true
+  });
+        });
 
 
 }); //LOAD DOM END
