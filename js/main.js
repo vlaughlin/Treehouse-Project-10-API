@@ -15,25 +15,25 @@ $(document).ready(function () {
              nat: ['us'], // NATIONALITY 
         },
 
-
-        function displayEmployees(data) {
+function displayEmployees(data) {
             var EmployeeHTML = '<ul>';
             $.each(data.results, function (i, employee) {
                 //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
                 EmployeeHTML += '<li class="employee-list">';
-                 EmployeeHTML += '<a href="'  + employee.picture.large + '" rel="lightbox" >'
-                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">' + '</a>'
+                
+                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.medium + '">' 
                 
                   //BUILD HTML TO DISPLAY NAMES IN PAGE//
                 EmployeeHTML += '<div class="employee-info">';
-                EmployeeHTML += '<span class="employee-name">' + employee.name.first + ' ' + employee.name.last + '</span>'
+                EmployeeHTML += '<span class="employee-name">' + employee.name.first + ' ' + employee.name.last + '</span>' + '<br>'
                  //BUILD HTML TO DISPLAY EMAILS IN PAGE//
-                EmployeeHTML += '<span class="employee-email">' + employee.email + '</span>'
+                EmployeeHTML +=   '<span class="employee-email">' + employee.email + '</span>' + '<br>'
                 //BUILD HTML TO DISPLAY LOCATIONS IN PAGE//
-                EmployeeHTML += '<span class="employee-location">' + 
-                employee.location.city + '</span>' 
+                 EmployeeHTML +=  '<span class="employee-location">' +
+                employee.location.city + '</span>' + '<br>'
                 //BUILD HTML TO DISPLAY BUTTONS IN PAGE//
-                 EmployeeHTML += '<button id="myBtn">Open Modal</button>'  
+                 
+               EmployeeHTML += '<button id="myBtn">Open Modal</button>' 
                 
              '</div>' 
 
