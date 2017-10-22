@@ -10,7 +10,7 @@ h1 {
 }
 
 h2 {
-    font-size: 10px;
+    font-size: 10px; 
 }
 
 .profile-pic {
@@ -41,7 +41,7 @@ ul {
 
 
 .employee-name {
-    font-size: 15px;
+    font-size: 13px;
     display: inline-block;
     text-transform: capitalize;
     font-weight: bold;
@@ -49,13 +49,13 @@ ul {
 
 .employee-email {
     display: inline-block;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .employee-location {
     text-transform: capitalize;
     display: inline-block;
-    font-size: 15px;
+    font-size: 10px;
 
 }
 
@@ -66,7 +66,7 @@ ul {
 
 
 @media (min-width: 768px) {
-    .employee-list {
+    .employee_list {
         float: left;
         top: 80px;
         margin: 4px;
@@ -76,6 +76,10 @@ ul {
 
 
 
+    .employee-name {
+        font-size: 12px;
+
+    }
 
     .employee-email {
 
@@ -98,27 +102,72 @@ ul {
 
 
 @media (min-width: 1024px) {
-    .employee-list {
-
+      .employee_list {
+        
         top: 120px;
+        left:10px;  
+        
+      
 
     }
-
+    
+    
     .employee-name {
-        font-size: 18px;
-        margin-right: 50px
+        font-size: 21px;
+
     }
 
     .employee-email {
-        font-size: 18px;
-        margin-right: 50px;
+
+        font-size: 20px;
     }
 
     .employee-location {
-        font-size: 18px;
-        margin-right: 50px;
+
+        font-size: 21px;
 
     }
 
+    
+    
+}
 
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

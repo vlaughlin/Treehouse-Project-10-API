@@ -15,7 +15,8 @@ $(document).ready(function () {
              nat: ['us'], // NATIONALITY 
         },
 
-function displayEmployees(data) {
+
+        function displayEmployees(data) {
             var EmployeeHTML = '<ul>';
             $.each(data.results, function (i, employee) {
                 //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
@@ -33,16 +34,48 @@ function displayEmployees(data) {
                 employee.location.city + '</span>' + '<br>'
                 //BUILD HTML TO DISPLAY BUTTONS IN PAGE//
                  
-               EmployeeHTML += '<button id="myBtn">More Details</button>' 
+               EmployeeHTML += '<button id="myBtn">Open Modal</button>' 
                 
              '</div>' 
 
+               //BUILD THE MODAL
+               EmployeeHTML += '<div id="myModal" class="modal">'
+                EmployeeHTML += '<div class="modal-content">'
+               EmployeeHTML += '<span class="close">&times;</span>' +
+                               '<p>'     
+                         
+                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.large + '">'    
+                     EmployeeHTML += '<span class="employee-name-modal">' + employee.name.first + ' ' + employee.name.last + '</span>'
+                 //BUILD HTML TO DISPLAY EMAILS IN PAGE//
+                EmployeeHTML += '<span class="employee-email-modal">' + employee.email + '</span>'
+                //BUILD HTML TO DISPLAY LOCATIONS IN PAGE//
+                EmployeeHTML += '<span class="employee-location-modal">' + 
+                employee.location.city + '</span>'   
+              
+
+                               
+                               
+                               '</p>'
+                   
+                '</div>'
+                   '</div>'
+
+
+
+
+
+
                });
+
+
+
             EmployeeHTML += '</ul>';
-            $('#employee-directory').html(EmployeeHTML);
+            $('#employee_directory').html(EmployeeHTML);
 
 
-// Get the modal
+             // Get the modal
+
+   $.each(data.results, function (i, employee) {           
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
@@ -52,9 +85,11 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
+
 btn.onclick = function() {
     modal.style.display = "block";
 }
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -66,9 +101,15 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+
 }
-    
-             
+  
+ });
+
+
+
+
+
                    
                     
 
@@ -79,6 +120,20 @@ window.onclick = function(event) {
 
 
 }); //LOAD DOM END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
