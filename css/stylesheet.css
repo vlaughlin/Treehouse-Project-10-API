@@ -10,7 +10,7 @@ h1 {
 }
 
 h2 {
-    font-size: 10px; 
+    font-size: 10px;
 }
 
 .profile-pic {
@@ -21,7 +21,6 @@ ul {
     list-style: none;
 }
 
-/*float left in tablet desktop mode*/
 
 .employee-list {
     position: relative;
@@ -41,7 +40,7 @@ ul {
 
 
 .employee-name {
-    font-size: 13px;
+    font-size: 15px;
     display: inline-block;
     text-transform: capitalize;
     font-weight: bold;
@@ -49,13 +48,13 @@ ul {
 
 .employee-email {
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .employee-location {
     text-transform: capitalize;
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
 
 }
 
@@ -64,73 +63,6 @@ ul {
     margin-top: -2em;
 }
 
-
-@media (min-width: 768px) {
-    .employee_list {
-        float: left;
-        top: 80px;
-        margin: 4px;
-        width: 40%;
-
-    }
-
-
-
-    .employee-name {
-        font-size: 12px;
-
-    }
-
-    .employee-email {
-
-        font-size: 15px;
-    }
-
-    .employee-location {
-
-        font-size: 15px;
-
-    }
-
-    h1 {
-        font-size: 25px;
-        margin-top: 60px;
-
-    }
-
-}
-
-
-@media (min-width: 1024px) {
-      .employee_list {
-        
-        top: 120px;
-        left:10px;  
-        
-      
-
-    }
-    
-    
-    .employee-name {
-        font-size: 21px;
-
-    }
-
-    .employee-email {
-
-        font-size: 20px;
-    }
-
-    .employee-location {
-
-        font-size: 21px;
-
-    }
-
-    
-    
-}
 
 
 
@@ -169,5 +101,67 @@ ul {
 .close:focus {
     color: black;
     text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .employee-list {
+        float: left;
+        top: 80px;
+        margin: 4px;
+        width: 40%;
+
+    }
+
+
+
+
+    .employee-email {
+
+        font-size: 15px;
+    }
+
+    .employee-location {
+
+        font-size: 15px;
+
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-top: 60px;
+
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    .employee-list {
+
+        top: 120px;
+
+    }
+
+    .employee-name {
+        font-size: 18px;
+        margin-right: 50px
+    }
+
+    .employee-email {
+        font-size: 18px;
+        margin-right: 50px;
+    }
+
+    .employee-location {
+        font-size: 18px;
+        margin-right: 50px;
+
+    }
+
+
+}
+
+
+
     cursor: pointer;
 }
