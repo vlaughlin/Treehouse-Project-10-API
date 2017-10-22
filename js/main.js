@@ -34,12 +34,12 @@ $(document).ready(function () {
                 employee.location.city + '</span>' + '<br>'
                 //BUILD HTML TO DISPLAY BUTTONS IN PAGE//
                  
-               EmployeeHTML += '<button id="myBtn">More Details </button>' 
+               EmployeeHTML += '<button id="detailsButton">More Details </button>' 
                 
              '</div>' 
 
                //BUILD THE MODAL
-               EmployeeHTML += '<div id="myModal" class="modal">'
+               EmployeeHTML += '<div id="employeeModal" class="modal">'
                 EmployeeHTML += '<div class="modal-content">'
                EmployeeHTML += '<span class="close">&times;</span>' +
                                '<p>'     
@@ -75,11 +75,11 @@ $(document).ready(function () {
 
              // Get the modal
 
-   $.each(data.results, function (i, employee) {           
-var modal = document.getElementById('myModal');
+        
+var modal = document.getElementById("employeeModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("detailsButton");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -101,19 +101,10 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-
+    
 }
-  
- });
-
-
-
-
-
                    
                     
-
-
         }); //GET JSON DATA END
     
 
