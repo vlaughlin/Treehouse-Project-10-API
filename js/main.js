@@ -33,7 +33,7 @@ function displayEmployees(data) {
                 employee.location.city + '</span>' + '<br>'
                 //BUILD HTML TO DISPLAY BUTTONS IN PAGE//
                  
-               EmployeeHTML += '<button id="myBtn">Open Modal</button>' 
+               EmployeeHTML += '<button id="myBtn">More Details</button>' 
                 
              '</div>' 
 
