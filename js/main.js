@@ -54,16 +54,9 @@ $(document).ready(function () {
                 employee.location.city + '</span>'   
               
 
-                               
-                               
-                               '</p>'
-                   
-                '</div>'
-                   '</div>'
+               
 
-
-
-
+                 EmployeeHTML += "</p></div></div></div></li>";
 
 
                });
