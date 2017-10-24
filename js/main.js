@@ -35,7 +35,7 @@ $(document).ready(function () {
                 employee.location.city + '</span>' + '<br>'
                 //BUILD HTML TO DISPLAY BUTTONS IN PAGE//
                  
-               EmployeeHTML += '<button id="detailsButton">More Details </button>' 
+               EmployeeHTML += '<button class="detailsButton">More Details </button>' 
                 
              '</div>' 
 
@@ -74,34 +74,9 @@ $(document).ready(function () {
 
              // Get the modal
 
-        
-var modal = document.getElementById("employeeModal");
+        $(".detailsButton").click(e => $(e.target).next().css("display", "block"));   // ALL buttons
+  $(".close").click(e => $(e.target).parent().parent().css("display", "none")); // ALL close spans  
 
-// Get the button that opens the modal
-var btn = document.getElementById("detailsButton");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    
-}
                    
                     
         }); //GET JSON DATA END
