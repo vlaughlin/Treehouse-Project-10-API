@@ -44,14 +44,27 @@ $(document).ready(function () {
                 EmployeeHTML += '<div class="modal-content">'
                EmployeeHTML += '<span class="close">&times;</span>' +
                                '<p>'     
-                         
-                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.large + '">'    
-                     EmployeeHTML += '<span class="employee-name-modal">' + employee.name.first + ' ' + employee.name.last + '</span>'
+                            //BUILD HTML TO DISPLAY PICTURES IN PAGE//
+                EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.large + '">' + '<br>'   //BUILD HTML TO DISPLAY FULL NAME IN PAGE//
+                     EmployeeHTML +=  '<span class="employee-name-modal">Name: ' + employee.name.first + ' ' + employee.name.last + '</span>' + '<br>'
+                
+                //BUILD HTML TO DISPLAY USERNAMES IN PAGE//
+                EmployeeHTML += '<span class="employee-username-modal">Username: ' + employee.login.username + '<br>' + '</span>'
                  //BUILD HTML TO DISPLAY EMAILS IN PAGE//
-                EmployeeHTML += '<span class="employee-email-modal">' + employee.email + '</span>'
-                //BUILD HTML TO DISPLAY LOCATIONS IN PAGE//
-                EmployeeHTML += '<span class="employee-location-modal">' + 
-                employee.location.city + '</span>'   
+                EmployeeHTML += '<span class="employee-email-modal">E-mail: ' + employee.email + '<br>' + '</span>'
+                
+                //BUILD HTML TO DISPLAY CELLPHONES IN PAGE//
+                EmployeeHTML += '<span class="employee-cellphone-modal"> Phone: +' +
+                employee.cell + '<br>' + '</span>'   
+                
+                  //BUILD HTML TO DISPLAY DETAILED ADDRESS IN PAGE//
+                EmployeeHTML += '<span class="employee-address-modal">Addres: ' + 
+                employee.location.street + '<br>'  + employee.location.city  +  ' ' + employee.location.state + ' ' + employee.location.postcode  + '<br>' +  '</span>'   
+              
+              
+                //BUILD HTML TO DISPLAY DOB IN PAGE//
+                EmployeeHTML += '<span class="employee-dob-modal">Birthday: ' + 
+                employee.dob + '<br>' +  '</span>'   
               
 
                
