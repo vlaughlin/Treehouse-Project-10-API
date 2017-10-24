@@ -1,4 +1,5 @@
 
+
 //LOAD DOM//
 
 $(document).ready(function () {
@@ -17,7 +18,7 @@ $(document).ready(function () {
 
 
         function displayEmployees(data) {
-            var EmployeeHTML = '<ul>';
+            var EmployeeHTML = '';
             $.each(data.results, function (i, employee) {
                 //BUILD HTML TO DISPLAY PHOTOS IN PAGE//
                 EmployeeHTML += '<li class="employee-list">';
@@ -68,8 +69,6 @@ $(document).ready(function () {
                });
 
 
-
-            EmployeeHTML += '</ul>';
             $('#employee_directory').html(EmployeeHTML);
 
 
@@ -111,25 +110,5 @@ window.onclick = function(event) {
 
 
 }); //LOAD DOM END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
