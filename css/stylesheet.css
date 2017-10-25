@@ -37,6 +37,9 @@ ul {
     margin-bottom: -3em;
 }
 
+.employee-list:hover {
+        background:#53a7ea;
+}
 
 
 .employee-name {
