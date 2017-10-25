@@ -38,7 +38,7 @@ ul {
 }
 
 .employee-list:hover {
-        background:#53a7ea;
+        background:#ffff66;
 }
 
 
@@ -61,8 +61,6 @@ ul {
 
 }
 .employee-name-modal,
-.employee-username-modal,
-.employee-email-modal,
 .employee-cellphone-modal,
 .employee-address-modal,
 .employee-dob-modal {
