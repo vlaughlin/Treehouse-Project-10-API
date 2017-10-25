@@ -1,221 +1,140 @@
 body {
-    background-color: aliceblue;
+        background-color: aliceblue;
 }
-
 h1 {
-    font-size: 20px;
-    color: #3a3a3a;
-    text-align: center;
-
+        font-size: 20px;
+        color: #3a3a3a;
+        text-align: center;
 }
-
 h2 {
-    font-size: 10px;
+        font-size: 10px;
 }
-
 .profile-pic {
-    border-radius: 50%;
+        border-radius: 50%;
 }
-
 ul {
-    list-style: none;
+        list-style: none;
 }
-
-
 .employee-list {
-    position: relative;
-    display: flex;
-
-    left: -40px;
-    border: 2px dashed #5772ff;
-    border-radius: 5px;
-    background: #d5e0ff;
-    justify-content: space-between;
-    padding: 1em;
-margin-top: 4em;
-    margin-bottom: -3em;
-     left: -10%;
-           
-         
+        position: relative;
+        display: flex;
+        left: -40px;
+        border: 2px dashed #5772ff;
+        border-radius: 5px;
+        background: #d5e0ff;
+        justify-content: space-between;
+        padding: 1em;
+        margin-top: 4em;
+        margin-bottom: -3em;
+        left: -10%;
 }
-
-
- 
 .employee-list:hover {
-    background: #ffff66;
+        background: #ffff66;
 }
-
-
 .employee-name {
-    font-size: 15px;
-    display: inline-block;
-    text-transform: capitalize;
-    font-weight: bold;
+        font-size: 15px;
+        display: inline-block;
+        text-transform: capitalize;
+        font-weight: bold;
 }
-
 .employee-email {
-    display: inline-block;
-    font-size: 15px;
+        display: inline-block;
+        font-size: 15px;
 }
-
 .employee-location {
-    text-transform: capitalize;
-    display: inline-block;
-    font-size: 15px;
-
+        text-transform: capitalize;
+        display: inline-block;
+        font-size: 15px;
 }
-
-.employee-name-modal,
-.employee-cellphone-modal,
-.employee-address-modal,
-.employee-dob-modal {
-    text-transform: capitalize;
-
-
-
-
+.employee-name-modal, .employee-cellphone-modal, .employee-address-modal, .employee-dob-modal {
+        text-transform: capitalize;
 }
-
-
-
 .container {
-
-    margin-top: -2em;
+        margin-top: -2em;
 }
-
-
-    
-    
- .detailsButton {
-  display: inline-block;
-  vertical-align: middle;
-  background-color: #ab99ff;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+.detailsButton {
+        display: inline-block;
+        vertical-align: middle;
+        background-color: #ab99ff;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
 }
 .detailsButton:hover, .detailsButton:focus, .detailsButton:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
-
-
 /* The Modal (background) */
 
 .modal {
-    display: none;
-
-    position: fixed;
-
-    z-index: 1;
-
-    left: 0;
-    top: 0;
-    width: 100%;
-
-    height: 100%;
-
-    overflow: auto;
-
-    background-color: rgb(0, 0, 0);
-
-    background-color: rgba(0, 0, 0, 0.4);
-
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
 }
-
 /* Modal Content/Box */
 
 .modal-content {
-
-    background-color: #fefefe;
-    margin: 15% auto;
-
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    text-align: center;
-
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        text-align: center;
 }
-
 /* The Close Button */
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-
+.close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
 }
-
 @media (min-width: 768px) {
-    .employee-list {
-        float: left;
-        top: 80px;
-        margin: 4px;
-        width: 40%;
-             left: -1%;
-
-    }
-
-
-
-
-    .employee-email,
-    .employee-location {
-
-        font-size: 15px;
-    }
-
-    h1 {
-        font-size: 25px;
-        margin-top: 60px;
-
-    }
-
-    .modal-content {
-
-
-        width: 50%
-    }
-
-
-    @media (min-width: 1024px) {
         .employee-list {
-
-
-
-            left: 12%;
-            right: 12%;
-            width: 30%;
-
-
+                float: left;
+                top: 80px;
+                margin: 4px;
+                width: 40%;
+                left: -1%;
         }
-
-        .employee-name,
-        .employee-email,
-        .employee-location {
-            font-size: 18px;
-            margin-right: 50px
+        .employee-email, .employee-location {
+                font-size: 15px;
         }
-
-
-
+        h1 {
+                font-size: 25px;
+                margin-top: 60px;
+        }
         .modal-content {
-
-
-            width: 30%
+                width: 50%;
         }
-
-
-    }
+}
+@media (min-width: 1024px) {
+        .employee-list {
+                width: 280px;
+                left: 8%;
+                right: 8%;
+        }
+        .employee-name, .employee-email, .employee-location {
+                font-size: 18px;
+                margin-right: 50px
+        }
+        .modal-content {
+                width: 30%;
+        }
+}
