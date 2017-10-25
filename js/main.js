@@ -46,24 +46,24 @@ $(document).ready(function () {
                                '<p>'     
                             //BUILD HTML TO DISPLAY PICTURES IN PAGE//
                 EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.large + '">' + '<br>'   //BUILD HTML TO DISPLAY FULL NAME IN PAGE//
-                     EmployeeHTML +=  '<span class="employee-name-modal">Name: ' + employee.name.first + ' ' + employee.name.last + '</span>' + '<br>'
+                     EmployeeHTML +=  '<span class="employee-name-modal"><b>Name:</b> ' + employee.name.first + ' ' + employee.name.last + '</span>' + '<br>'
                 
                 //BUILD HTML TO DISPLAY USERNAMES IN PAGE//
-                EmployeeHTML += '<span class="employee-username-modal">Username: ' + employee.login.username + '<br>' + '</span>'
+                EmployeeHTML += '<span class="employee-username-modal"><b>Username:</b> ' + employee.login.username + '<br>' + '</span>'
                  //BUILD HTML TO DISPLAY EMAILS IN PAGE//
-                EmployeeHTML += '<span class="employee-email-modal">E-mail: ' + employee.email + '<br>' + '</span>'
+                EmployeeHTML += '<span class="employee-email-modal"><b>E-mail:</b> ' + employee.email + '<br>' + '</span>'
                 
                 //BUILD HTML TO DISPLAY CELLPHONES IN PAGE//
-                EmployeeHTML += '<span class="employee-cellphone-modal"> Phone: +' +
+                EmployeeHTML += '<span class="employee-cellphone-modal"><b>Phone:</b> +' +
                 employee.cell + '<br>' + '</span>'   
                 
                   //BUILD HTML TO DISPLAY DETAILED ADDRESS IN PAGE//
-                EmployeeHTML += '<span class="employee-address-modal">Addres: ' + 
+                EmployeeHTML += '<span class="employee-address-modal"><b>Address:</b> ' + 
                 employee.location.street + '<br>'  + employee.location.city  +  ' ' + employee.location.state + ' ' + employee.location.postcode  + '<br>' +  '</span>'   
               
               
                 //BUILD HTML TO DISPLAY DOB IN PAGE//
-                EmployeeHTML += '<span class="employee-dob-modal">Birthday: ' + 
+                EmployeeHTML += '<span class="employee-dob-modal"><b>Birthday:</b> ' + 
                 employee.dob + '<br>' +  '</span>'   
               
 

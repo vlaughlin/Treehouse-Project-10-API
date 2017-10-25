@@ -60,6 +60,20 @@ ul {
     font-size: 15px;
 
 }
+.employee-name-modal,
+.employee-username-modal,
+.employee-email-modal,
+.employee-cellphone-modal,
+.employee-address-modal,
+.employee-dob-modal {
+        text-transform: capitalize;
+    
+    
+    
+    
+}
+
+              
 
 .container {
 
