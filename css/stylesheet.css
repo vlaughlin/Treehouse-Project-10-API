@@ -1,5 +1,5 @@
 body {
-        background-color: aliceblue;
+        background-color: lavenderblush;
 }
 h1 {
         font-size: 20px;
@@ -19,9 +19,9 @@ ul {
         position: relative;
         display: flex;
         left: -40px;
-        border: 2px dashed #5772ff;
+        border: 2px solid black;
         border-radius: 5px;
-        background: #d5e0ff;
+        background: thistle;
         justify-content: space-between;
         padding: 1em;
         margin-top: 4em;
@@ -29,7 +29,7 @@ ul {
         left: -10%;
 }
 .employee-list:hover {
-        background: #ffff66;
+        background: gold;
 }
 .employee-name {
         font-size: 15px;
@@ -55,7 +55,7 @@ ul {
 .detailsButton {
         display: inline-block;
         vertical-align: middle;
-        background-color: #ab99ff;
+        background-color: white;
         -webkit-transform: perspective(1px) translateZ(0);
         transform: perspective(1px) translateZ(0);
         box-shadow: 0 0 1px transparent;
@@ -126,7 +126,7 @@ ul {
 }
 @media (min-width: 1024px) {
         .employee-list {
-                width: 280px;
+                width: 320px;
                 left: 8%;
                 right: 8%;
         }
