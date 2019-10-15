@@ -1,5 +1,3 @@
-
-
 //LOAD DOM//
 
 $(document).ready(function () {
@@ -46,7 +44,7 @@ $(document).ready(function () {
                                '<p>'     
                             //BUILD HTML TO DISPLAY PICTURES IN PAGE//
                 EmployeeHTML += '<img class="profile-pic" src="' + employee.picture.large + '">' + '<br>'   //BUILD HTML TO DISPLAY FULL NAME IN PAGE//
-                     EmployeeHTML +=  '<span class="employee-name-modal"><b>Name:</b> ' + employee.name.first + ' ' + employee.name.last + '</span>' + '<br>'
+                EmployeeHTML +=  '<span class="employee-name-modal"><b>Name:</b> ' + employee.name.first + ' ' + employee.name.last + '</span>' + '<br>'
                 
                 //BUILD HTML TO DISPLAY USERNAMES IN PAGE//
                 EmployeeHTML += '<span class="employee-username-modal"><b>Username:</b> ' + employee.login.username + '<br>' + '</span>'
@@ -59,17 +57,13 @@ $(document).ready(function () {
                 
                   //BUILD HTML TO DISPLAY DETAILED ADDRESS IN PAGE//
                 EmployeeHTML += '<span class="employee-address-modal"><b>Address:</b> ' + 
-                employee.location.street + '<br>'  + employee.location.city  +  ' ' + employee.location.state + ' ' + employee.location.postcode  + '<br>' +  '</span>'   
+                 employee.location.street.number +  ' ' + employee.location.street.name + '<br>'  + employee.location.city  +  ' ' + employee.location.state + ' ' + employee.location.postcode  + '<br>' +  '</span>'   
               
-              
-                //BUILD HTML TO DISPLAY DOB IN PAGE//
+              //BUILD HTML TO DISPLAY DOB IN PAGE//
                 EmployeeHTML += '<span class="employee-dob-modal"><b>Birthday:</b> ' + 
-                employee.dob.date + '<br>' +  '</span>'   
+                new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.location); + '<br>' +  '</span>'   
               
-
-               
-
-                 EmployeeHTML += "</p></div></div></div></li>";
+                EmployeeHTML += "</p></div></div></div></li>";
 
 
                });
@@ -80,16 +74,10 @@ $(document).ready(function () {
 
              // Get the modal
 
-        $(".detailsButton").click(e => $(e.target).next().css("display", "block"));   // ALL buttons
-  $(".close").click(e => $(e.target).parent().parent().css("display", "none")); // ALL close spans  
+            $(".detailsButton").click(e => $(e.target).next().css("display", "block"));   // ALL buttons
+            $(".close").click(e => $(e.target).parent().parent().css("display", "none")); // ALL close spans  
 
                    
                     
-        }); //GET JSON DATA END
-    
-
-
-
-}); //LOAD DOM END
-
-
+            }); //GET JSON DATA END
+            }); //LOAD DOM END
