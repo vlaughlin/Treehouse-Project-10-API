@@ -64,7 +64,7 @@ $(document).ready(function () {
               
                 //BUILD HTML TO DISPLAY DOB IN PAGE//
                 EmployeeHTML += '<span class="employee-dob-modal"><b>Birthday:</b> ' + 
-                employee.dob + '<br>' +  '</span>'   
+                employee.dob.date + '<br>' +  '</span>'   
               
 
                
